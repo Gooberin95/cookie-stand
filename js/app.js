@@ -7,15 +7,15 @@ let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '
 
 function randomAge(min, max) {
     return Math.floor(Math.random() * (max - min +1) + min);
-}
+};
 
 let seattle = {
-    minCust: '23',
-    maxCust: '65',
+    minCust: 23,
+    maxCust: 65,
     avgCookieSale: '6.3',
     daySale:'0',
   getSum: function() {
-    this.daySale = `${randomAge(23,65)} today`
+    return `${randomAge(23, 65)} today`;
   },
 
     
@@ -31,14 +31,24 @@ let seattle = {
             liElem.textContent = `${hours[i]}`;
             ulElem.appendChild(liElem);
         }
-    }
-}
+    },
+};
 
 
 
-seattle.getSum();
+
 seattle.render();
-console.log(seattle.daySale);
+console.log(seattle.getSum());
+
+
+
+
+
+
+
+
+
+
 
 
 
