@@ -84,7 +84,10 @@ getSum: function() {
 
       let articleElem = document.createElement('article');
       sectionElem3.appendChild(articleElem);
-
+      let hrElem = document.createElement('h1');
+      sectionElem3.appendChild(hrElem);
+      hrElem.textContent = `${this.name}`;
+      articleElem.appendChild(hrElem);
       let ulElem = document.createElement('ul');
       articleElem.appendChild(ulElem);
       for (let i = 0; i < hours.length; i++) {
@@ -114,6 +117,10 @@ getSum: function() {
 
       let articleElem = document.createElement('article');
       sectionElem4.appendChild(articleElem);
+      let hrElem = document.createElement('h1');
+      hrElem.textContent = `${this.name}`;
+      articleElem.appendChild(hrElem);
+
 
       let ulElem = document.createElement('ul');
       articleElem.appendChild(ulElem);
@@ -128,7 +135,7 @@ getSum: function() {
 
 
 let lima = {
-  name: 'lima',
+  name: 'Lima',
   minCust: 3,
   maxCust: 24,
   avgCookieSale: '1.2',
@@ -143,6 +150,8 @@ getSum: function() {
       let articleElem = document.createElement('article');
       sectionElem5.appendChild(articleElem);
       let hrElem = document.createElement('h1');
+      hrElem.textContent = `${this.name}`;
+      articleElem.appendChild(hrElem);
       
       
       let ulElem = document.createElement('ul');
