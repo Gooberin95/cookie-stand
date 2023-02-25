@@ -15,6 +15,7 @@ function randomAge(min, max) {
 let seattle = {
     minCust: 23,
     maxCust: 65,
+    name:'Seattle',
     avgCookieSale: '6.3',
     daySale:'0',
   getSum: function() {
@@ -26,7 +27,10 @@ let seattle = {
 
         let articleElem = document.createElement('article');
         sectionElem.appendChild(articleElem);
-
+        let hrElem = document.createElement('h1');
+        hrElem.textContent = `${this.name}`;
+        articleElem.appendChild(hrElem);
+        
         let ulElem = document.createElement('ul');
         articleElem.appendChild(ulElem);
         for (let i = 0; i < hours.length; i++) {
@@ -38,6 +42,7 @@ let seattle = {
 };
 
 let tokyo = {
+  name: 'Tokyo',
   minCust: 3,
   maxCust: 24,
   avgCookieSale: '1.2',
@@ -51,7 +56,9 @@ getSum: function() {
 
       let articleElem = document.createElement('article');
       sectionElem2.appendChild(articleElem);
-
+      let hrElem = document.createElement('h1');
+      hrElem.textContent = `${this.name}`;
+      articleElem.appendChild(hrElem);
       let ulElem = document.createElement('ul');
       articleElem.appendChild(ulElem);
       for (let i = 0; i < hours.length; i++) {
@@ -63,6 +70,7 @@ getSum: function() {
 };
 
 let dubai = {
+  name: 'Dubai',
   minCust: 3,
   maxCust: 24,
   avgCookieSale: '1.2',
@@ -92,6 +100,7 @@ getSum: function() {
 
 
 let paris = {
+  name: 'Paris',
   minCust: 3,
   maxCust: 24,
   avgCookieSale: '1.2',
@@ -119,6 +128,7 @@ getSum: function() {
 
 
 let lima = {
+  name: 'lima',
   minCust: 3,
   maxCust: 24,
   avgCookieSale: '1.2',
@@ -132,7 +142,9 @@ getSum: function() {
 
       let articleElem = document.createElement('article');
       sectionElem5.appendChild(articleElem);
-
+      let hrElem = document.createElement('h1');
+      
+      
       let ulElem = document.createElement('ul');
       articleElem.appendChild(ulElem);
       for (let i = 0; i < hours.length; i++) {
