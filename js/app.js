@@ -1,7 +1,8 @@
 'use strict';
 let sectionElem = document.getElementById('seattle');
 console.log(sectionElem);
-let sectionElem2 = document.getElementById('Tokyo');
+let sectionElem2 = document.getElementById('tokyo');
+let sectionElem3 = document.getElementById('dubai');
 
 let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
 
@@ -15,7 +16,7 @@ let seattle = {
     avgCookieSale: '6.3',
     daySale:'0',
   getSum: function() {
-    return `${randomAge(23, 65)} today`;
+    return `${randomAge(23, 65)}`;
   },
 
     
@@ -28,16 +29,73 @@ let seattle = {
         articleElem.appendChild(ulElem);
         for (let i = 0; i < hours.length; i++) {
             let liElem = document.createElement('li');
-            liElem.textContent = `${hours[i]}`;
+            liElem.textContent = `${hours[i]} ${this.getSum()} cookies`;
             ulElem.appendChild(liElem);
         }
     },
 };
 
+let tokyo = {
+  minCust: 3,
+  maxCust: 24,
+  avgCookieSale: '1.2',
+  daySale:'0',
+getSum: function() {
+  return `${randomAge(3, 24)}`;
+},
+
+  
+  render: function () {
+
+      let articleElem = document.createElement('article');
+      sectionElem2.appendChild(articleElem);
+
+      let ulElem = document.createElement('ul');
+      articleElem.appendChild(ulElem);
+      for (let i = 0; i < hours.length; i++) {
+          let liElem = document.createElement('li');
+          liElem.textContent = `${hours[i]} ${this.getSum()} cookies`;
+          ulElem.appendChild(liElem);
+      }
+  },
+};
+
+let dubai = {
+  minCust: 3,
+  maxCust: 24,
+  avgCookieSale: '1.2',
+  daySale:'0',
+getSum: function() {
+  return `${randomAge(3, 24)}`;
+},
+
+  
+  render: function () {
+
+      let articleElem = document.createElement('article');
+      sectionElem3.appendChild(articleElem);
+
+      let ulElem = document.createElement('ul');
+      articleElem.appendChild(ulElem);
+      for (let i = 0; i < hours.length; i++) {
+          let liElem = document.createElement('li');
+          liElem.textContent = `${hours[i]} ${this.getSum()} cookies`;
+          ulElem.appendChild(liElem);
+      }
+  },
+};
+
+
+
+
+
+
 
 
 
 seattle.render();
+tokyo.render();
+dubai.render();
 console.log(seattle.getSum());
 
 
