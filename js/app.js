@@ -16,30 +16,50 @@ let seattle = {
     minCust: 23,
     maxCust: 65,
     name:'Seattle',
-    avgCookieSale: '6.3',
-    daySale:'0',
-  getSum: function() {
-    return `${randomAge(23, 65)}`;
+    avgCookieSale: 6.3,
+    sum:0,
+    customers: [],
+    hrSales: [],
+    getSum: function() {
+    for (let i = 0; i < hours.length; i++) {
+      this.customers.push(randomAge(this.minCust, this.maxCust));
+    }
+    
+
+    
   },
+    hrSum: function() {
+      this.getSum();
+      for (let i = 0; i < this.customers.length; i++){
+        let cookies = this.customers[i] * this.avgCookieSale;
+        this.hrSales.push(cookies);
+        this.sum += cookies;
+      }
+    },
 
     
     render: function () {
-
+        this.hrSum();
         let articleElem = document.createElement('article');
         sectionElem.appendChild(articleElem);
         let hrElem = document.createElement('h1');
         hrElem.textContent = `${this.name}`;
         articleElem.appendChild(hrElem);
-        
         let ulElem = document.createElement('ul');
         articleElem.appendChild(ulElem);
         for (let i = 0; i < hours.length; i++) {
             let liElem = document.createElement('li');
-            liElem.textContent = `${hours[i]} ${this.getSum()} cookies`;
+            liElem.textContent = `${hours[i]} ${this.hrSales[i]} cookies`;
             ulElem.appendChild(liElem);
-        }
+         }
+
+         let liTotal = document.createElement('li');
+         liTotal.textContent = `Total cookies:${this.sum}`;
+         ulElem.appendChild(liTotal);
+
     },
 };
+
 
 let tokyo = {
   name: 'Tokyo',
@@ -47,9 +67,23 @@ let tokyo = {
   maxCust: 24,
   avgCookieSale: '1.2',
   daySale:'0',
-getSum: function() {
-  return `${randomAge(3, 24)}`;
-},
+  getSum: function() {
+    for (let i = 0; i < hours.length; i++) {
+      this.customers.push(randomAge(this.minCust, this.maxCust));
+    }
+    
+
+    
+  },
+    hrSum: function() {
+      this.getSum();
+      for (let i = 0; i < this.customers.length; i++){
+        let cookies = this.customers[i] * this.avgCookieSale;
+        this.hrSales.push(cookies);
+        this.sum += cookies;
+      }
+    },
+
 
   
   render: function () {
@@ -75,9 +109,23 @@ let dubai = {
   maxCust: 24,
   avgCookieSale: '1.2',
   daySale:'0',
-getSum: function() {
-  return `${randomAge(3, 24)}`;
-},
+  getSum: function() {
+    for (let i = 0; i < hours.length; i++) {
+      this.customers.push(randomAge(this.minCust, this.maxCust));
+    }
+    
+
+    
+  },
+    hrSum: function() {
+      this.getSum();
+      for (let i = 0; i < this.customers.length; i++){
+        let cookies = this.customers[i] * this.avgCookieSale;
+        this.hrSales.push(cookies);
+        this.sum += cookies;
+      }
+    },
+
 
   
   render: function () {
@@ -108,9 +156,23 @@ let paris = {
   maxCust: 24,
   avgCookieSale: '1.2',
   daySale:'0',
-getSum: function() {
-  return `${randomAge(3, 24)}`;
-},
+  getSum: function() {
+    for (let i = 0; i < hours.length; i++) {
+      this.customers.push(randomAge(this.minCust, this.maxCust));
+    }
+    
+
+    
+  },
+    hrSum: function() {
+      this.getSum();
+      for (let i = 0; i < this.customers.length; i++){
+        let cookies = this.customers[i] * this.avgCookieSale;
+        this.hrSales.push(cookies);
+        this.sum += cookies;
+      }
+    },
+
 
   
   render: function () {
@@ -139,10 +201,23 @@ let lima = {
   minCust: 3,
   maxCust: 24,
   avgCookieSale: '1.2',
-  daySale:'0',
-getSum: function() {
-  return `${randomAge(3, 24)}`;
-},
+  daySale:0,
+  getSum: function() {
+    for (let i = 0; i < hours.length; i++) {
+      this.customers.push(randomAge(this.minCust, this.maxCust));
+    }
+    
+
+    
+  },
+    hrSum: function() {
+      this.getSum();
+      for (let i = 0; i < this.customers.length; i++){
+        let cookies = this.customers[i] * this.avgCookieSale;
+        this.hrSales.push(cookies);
+        this.sum += cookies;
+      }
+    },
 
   
   render: function () {
@@ -160,56 +235,14 @@ getSum: function() {
           let liElem = document.createElement('li');
           liElem.textContent = `${hours[i]} ${this.getSum()} cookies`;
           ulElem.appendChild(liElem);
+          
       }
+      
   },
 };
 
-seattle.render();
-tokyo.render();
-dubai.render();
-paris.render();
-lima.render();
-console.log(seattle.getSum());
-
-
-
-
-
-
-
-
-
-
-
-
-
-// let Tokyo = {
-//     minCust: '3'
-//     maxCust: '24'
-//     avgCookieSale: '1.2'
-
-
-// }
-
-// let Dubai = {
-//     minCust: '11'
-//     maxCust: '38'
-//     avgCookieSale: '3.7'
-
-
-// }
-
-// let Paris = {
-//     minCust: '20'
-//     maxCust: '38'
-//     avgCookieSale: '2.3'
-
-
-// }
-// let Lima = {
-//     minCust: '2'
-//     maxCust: '16'
-//     avgCookieSale: '4.6'
-
-
-// }
+// seattle.render();
+// tokyo.render();
+// dubai.render();
+// paris.render();
+// lima.render();
