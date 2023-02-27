@@ -46,24 +46,24 @@ class Store {
 
 
 
-// Store.prototype.rendering = function () {
-//   let tableElem = document.createElement('table');
-//   sectionElem6.appendChild(tableElem);
+Store.prototype.rendering = function () {
+  let tableElem = document.createElement('table');
+  sectionElem6.appendChild(tableElem);
 
-//   // first row
-//   // going to need a row for every store
-//   let row1 = document.createElement('tr');
-//   tableElem.appendChild(row1);
-//   let th1Elem = document.createElement('th');
-//   row1.appendChild(th1Elem);
-//   th1Elem.textContent = hours;
-//   let th2Elem = document.createElement('th');
-//   row1.appendChild(th2Elem);
-//   th2Elem.textContent = "Daily total";
-//   let th3Elem = document.createElement('th');
-//   row1.appendChild(th3Elem);
-//   th3Elem.textContent = this.sum;
-
+  // first row
+  // going to need a row for every store
+  let row1 = document.createElement('tr');
+  tableElem.appendChild(row1);
+  let th1Elem = document.createElement('th');
+  row1.appendChild(th1Elem);
+  th1Elem.textContent = hours;
+  let th2Elem = document.createElement('th');
+  row1.appendChild(th2Elem);
+  th2Elem.textContent = "Daily total";
+  let th3Elem = document.createElement('th');
+  row1.appendChild(th3Elem);
+  th3Elem.textContent = this.sum;
+}
 //   // second row
 //   let row2 = document.createElement('tr');
 //   tableElem.appendChild(row2);
@@ -82,6 +82,8 @@ class Store {
 
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
 console.log(homeTown.sum);
+homeTown.rendering();
+
 
 
 
