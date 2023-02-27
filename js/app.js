@@ -83,11 +83,17 @@ Store.prototype.rendering = function () {
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
 let tokyoTown = new Store(3,25,1.2, 'Tokyo');
 let dubaiTown = new Store(11,38,3.7,'Dubai');
+let parisTown = new Store(20,38,2.3,'Paris');
+let limaTown = new Store(23,65,6.3,'Lima');
 
 console.log(homeTown.sum);
 homeTown.rendering();
 tokyoTown.rendering();
 dubaiTown.rendering();
+parisTown.rendering();
+limaTown.rendering();
+
+
 
 
 
