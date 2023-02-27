@@ -56,7 +56,7 @@ Store.prototype.rendering = function () {
   tableElem.appendChild(row1);
   let th1Elem = document.createElement('th');
   row1.appendChild(th1Elem);
-  th1Elem.textContent = hours;
+  th1Elem.textContent = `${hours} Daily Location Total`;
   // let th2Elem = document.createElement('th');
   // row1.appendChild(th2Elem);
   // th2Elem.textContent = "Daily total";
@@ -69,7 +69,7 @@ Store.prototype.rendering = function () {
   tableElem.appendChild(row2);
   let td1Elem = document.createElement('td');
   row2.appendChild(td1Elem);
-  td1Elem.textContent = `${this.name}  ${this.hrSales}  Daily Total Sales:${this.sum}`;
+  td1Elem.textContent = `       ${this.name}  ${this.hrSales}    ${this.sum}`;
 
   // let row3 = document.createElement('tr');
   // tableElem.appendChild(row3);
