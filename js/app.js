@@ -33,7 +33,7 @@ let seattle = {
       this.getSum();
       for (let i = 0; i < this.customers.length; i++){
         let cookies = this.customers[i] * this.avgCookieSale;
-        this.hrSales.push(cookies);
+        this.hrSales.push(Math.floor(cookies));
         this.sum += cookies;
       }
     },
@@ -245,12 +245,15 @@ let lima = {
         articleElem.appendChild(hrElem);
         let ulElem = document.createElement('ul');
         articleElem.appendChild(ulElem);
+        
+        
+        sectionElem.appendChild(tableElem);
         for (let i = 0; i < hours.length; i++) {
             let liElem = document.createElement('li');
             liElem.textContent = `${hours[i]} ${this.hrSales[i]} cookies`;
             ulElem.appendChild(liElem);
          }
-
+         let tabElem = (a)
          let liTotal = document.createElement('li');
          liTotal.textContent = `Total cookies:${this.sum}`;
          ulElem.appendChild(liTotal);
