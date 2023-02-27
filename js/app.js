@@ -69,7 +69,7 @@ Store.prototype.rendering = function () {
   tableElem.appendChild(row2);
   let td1Elem = document.createElement('td');
   row2.appendChild(td1Elem);
-  td1Elem.textContent = `${this.name}  ${this.hrSales}`;
+  td1Elem.textContent = `${this.name}  ${this.hrSales}  Daily Total Sales:${this.sum}`;
 
   // let row3 = document.createElement('tr');
   // tableElem.appendChild(row3);
