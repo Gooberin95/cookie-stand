@@ -15,81 +15,75 @@ function randomAge(min, max) {
 // console.log(seattle.sum);
 
 
-function Store(minCust, maxCust, averageCookieSale, name) {
-  this.name = name;
-  this.sum = 0;
-  this.customersPerHour = [];
-  this.hrSales = [];
-  this.minCust = minCust;
-  this.maxCust = maxCust;
-  this.averageCookieSale = averageCookieSale;
-  
-}
+class Store {
+  constructor(minCust, maxCust, averageCookieSale, name) {
+    this.name = name;
+    this.sum = 0;
+    this.customersPerHour = [];
+    this.hrSales = [];
+    this.minCust = minCust;
+    this.maxCust = maxCust;
+    this.averageCookieSale = averageCookieSale;
 
-
-Store.prototype.SalesHour = function () {
-
-    for(let i = 0; i < hours.length; i++) {
-      let customers = randomAge(this.minCust, this.maxCust);
-
-      let tally = this.customersPerHour.push(randomAge(this.minCust, this.maxCust));
+    for (let i = 0; i < hours.length; i++) {
+      let tally = this.customersPerHour = randomAge(this.minCust, this.maxCust);
       this.hrSales.push(tally);
       this.sum += tally;
+    }
+    
+    for (let i = 0; i < this.customersPerHour.length; i++) {
+      let cookies = this.customers[i] * this.avgCookieSale;
+      this.hrSales.push(Math.floor(cookies));
+      this.sum += Math.floor(cookies);
+    }
 
-
-}
-
-
-}
-
-Store.prototype.Summing = function () {
-  this.getSum();
-  for (let i = 0; i < this.customers.length; i++) {
-    let cookies = this.customers[i] * this.avgCookieSale;
-    this.hrSales.push(Math.floor(cookies));
-    this.sum += Math.floor(cookies);
   }
-  
-}
+};
 
 
-Store.prototype.rendering = function () {
-  let tableElem = document.createElement('table');
-  sectionElem6.appendChild(tableElem);
 
-  // first row
-  // going to need a row for every store
-  let row1 = document.createElement('tr');
-  tableElem.appendChild(row1);
-  let th1Elem = document.createElement('th');
-  row1.appendChild(th1Elem);
-  th1Elem.textContent = hours;
-  let th2Elem = document.createElement('th');
-  row1.appendChild(th2Elem);
-  th2Elem.textContent = "Daily total";
-  let th3Elem = document.createElement('th');
-  row1.appendChild(th3Elem);
-  th3Elem.textContent = this.sum;
 
-  // second row
-  let row2 = document.createElement('tr');
-  tableElem.appendChild(row2);
-  let td1Elem = document.createElement('td');
-  row2.appendChild(td1Elem);
-  td1Elem.textContent = this.isGoodWithDogs;
-  let td2Elem = document.createElement('td');
-  row2.appendChild(td2Elem);
-  td2Elem.textContent = this.isGoodWithCats;
-  let td3Elem = document.createElement('td');
-  row2.appendChild(td3Elem);
-  td3Elem.textContent = this.isGoodWithKids;
-}
+
+
+
+// Store.prototype.rendering = function () {
+//   let tableElem = document.createElement('table');
+//   sectionElem6.appendChild(tableElem);
+
+//   // first row
+//   // going to need a row for every store
+//   let row1 = document.createElement('tr');
+//   tableElem.appendChild(row1);
+//   let th1Elem = document.createElement('th');
+//   row1.appendChild(th1Elem);
+//   th1Elem.textContent = hours;
+//   let th2Elem = document.createElement('th');
+//   row1.appendChild(th2Elem);
+//   th2Elem.textContent = "Daily total";
+//   let th3Elem = document.createElement('th');
+//   row1.appendChild(th3Elem);
+//   th3Elem.textContent = this.sum;
+
+//   // second row
+//   let row2 = document.createElement('tr');
+//   tableElem.appendChild(row2);
+//   let td1Elem = document.createElement('td');
+//   row2.appendChild(td1Elem);
+//   td1Elem.textContent = this.isGoodWithDogs;
+//   let td2Elem = document.createElement('td');
+//   row2.appendChild(td2Elem);
+//   td2Elem.textContent = this.isGoodWithCats;
+//   let td3Elem = document.createElement('td');
+//   row2.appendChild(td3Elem);
+//   td3Elem.textContent = this.isGoodWithKids;
+// }
 
 
 
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
-console.log(homeTown);
-console.log(homeTown.SalesHour());
+console.log(homeTown.sum);
+
+
 
 
 
@@ -97,5 +91,4 @@ console.log(homeTown.SalesHour());
 
 // let tokyo = new Store(3,24,1.2, 'Tokyo',)
 // homeTown.
-// homeTown.rendering();
-console.log(trash);
+// homeTown.rendering()
