@@ -43,18 +43,13 @@ class Store {
 
 
 
-// let tableElem = document.createElement('th');
-// sectionElem.appendChild(tableElem);
 
-// // first row
-// // going to need a row for every store
-// let row1 = document.createElement('th');
-// tableElem.appendChild(row1);
-// let th1Elem = document.createElement('th');
-// row1.appendChild(th1Elem);
 
-// th1Elem.textContent = `${hours}`;
+let row1 = document.createElement('th');
+sectionElem.appendChild(row1);
 
+
+row1.textContent = hours;
 
 // let tbodyElem = document.createElement('tbody');
 // sectionElem.appendChild(tbodyElem);
@@ -62,29 +57,34 @@ class Store {
 // let row = document.createElement('th');
 // sectionElem.appendChild(row);
 // row.textContent = hours;
-// // Render each store at a time
-Store.prototype.rendering = function () {
 
+Store.prototype.rendering = function () {
+  
   let tbodyElem2 = document.createElement('tr');
   sectionElem.appendChild(tbodyElem2);
-  tbodyElem2.textContent = this.hrSales;
+  let td1Elem = document.createElement('td');
+  tbodyElem2.appendChild(td1Elem);
+  td1Elem.textContent = this.hrSales;
+};
+
   // row for each store
-}
+
+
+//   for (let i = 0; i < this.hrSales.length; i --); {
+//     let tdSalesElem = document.createElement('td');
+//     td1Elem.appendChild(tdSalesElem);
+//     tdSalesElem.textContent = this.hrSales[i];
+//   }
+
+//   let lastTotal = document.createElement('td');
+//   tbodyElem2.appendChild(lastTotal);
+//   lastTotal.textContent = `$Total is ${this.sum}`;
+
+
+
 // }
-// //   for (let i = 0; i < this.hrSales.length; i --); {
-// //     let tdSalesElem = document.createElement('td');
-// //     td1Elem.appendChild(tdSalesElem);
-// //     tdSalesElem.textContent = this.hrSales[i];
-// //   }
-
-// //   let lastTotal = document.createElement('td');
-// //   tbodyElem.appendChild(lastTotal);
-// //   lastTotal.textContent = `$Total is ${this.sum}`;
-
-// // }
-
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
-let tokyoTown = new Store(3,25,1.2, 'Tokyo');
+let tokyoTown = new Store(23,25,3.2, 'Tokyo');
 let dubaiTown = new Store(11,38,3.7,'Dubai');
 let parisTown = new Store(20,38,2.3,'Paris');
 let limaTown = new Store(23,65,6.3,'Lima');
