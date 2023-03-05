@@ -31,7 +31,7 @@ class Store {
       this.hrSales.push(tally);
       this.sum += tally;
     }
-    
+
     for (let i = 0; i < this.customersPerHour.length; i++) {
       let cookies = this.customers[i] * this.avgCookieSale;
       this.hrSales.push(Math.floor(cookies));
@@ -59,35 +59,29 @@ row1.textContent = hours;
 // row.textContent = hours;
 
 Store.prototype.rendering = function () {
-  
-  let tbodyElem2 = document.createElement('tr');
-  sectionElem.appendChild(tbodyElem2);
-  let td1Elem = document.createElement('td');
-  tbodyElem2.appendChild(td1Elem);
-  td1Elem.textContent = this.hrSales;
-};
+  for (let i = 0; i < hours.length; i++);
+    
+    let rows = document.createElement('tr');
+    row1.appendChild(rows);
 
-  // row for each store
+    let th1Elem = document.createElement('td');
+    rows.appendChild(th1Elem);
+    th1Elem.textContent = `${this.name}${this.hrSales}`;
+      
+    let lastTotal = document.createElement('td');
+    rows.appendChild(lastTotal);
+    lastTotal.textContent = `Daily Total: ${this.sum}`;
 
 
-//   for (let i = 0; i < this.hrSales.length; i --); {
-//     let tdSalesElem = document.createElement('td');
-//     td1Elem.appendChild(tdSalesElem);
-//     tdSalesElem.textContent = this.hrSales[i];
-//   }
-
-//   let lastTotal = document.createElement('td');
-//   tbodyElem2.appendChild(lastTotal);
-//   lastTotal.textContent = `$Total is ${this.sum}`;
+}
 
 
 
-// }
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
-let tokyoTown = new Store(23,25,3.2, 'Tokyo');
-let dubaiTown = new Store(11,38,3.7,'Dubai');
-let parisTown = new Store(20,38,2.3,'Paris');
-let limaTown = new Store(23,65,6.3,'Lima');
+let tokyoTown = new Store(23, 25, 3.2, 'Tokyo');
+let dubaiTown = new Store(11, 38, 3.7, 'Dubai');
+let parisTown = new Store(20, 38, 2.3, 'Paris');
+let limaTown = new Store(23, 65, 6.3, 'Lima');
 
 homeTown.rendering();
 tokyoTown.rendering();
