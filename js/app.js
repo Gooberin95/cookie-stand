@@ -84,6 +84,9 @@ function header() {
     lead.textContent = hours[i];
   }
 
+  let ending = document.createElement('th');
+  rowHeader.appendChild(ending);
+  ending.textContent = `Daily total`;
 
 };
 
