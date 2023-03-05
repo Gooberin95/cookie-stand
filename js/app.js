@@ -1,8 +1,9 @@
 
 'use strict';
-let sectionElem = document.getElementById('seattle');
-let sectionElem6 = document.getElementById('salmon');
-console.log(sectionElem);
+let sectionElem = document.getElementById('salesTable');
+
+
+
 
 
 let trash = [];
@@ -12,7 +13,7 @@ function randomAge(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
 
-// console.log(seattle.sum);
+
 
 
 class Store {
@@ -42,58 +43,51 @@ class Store {
 
 
 
+// let tableElem = document.createElement('th');
+// sectionElem.appendChild(tableElem);
+
+// // first row
+// // going to need a row for every store
+// let row1 = document.createElement('th');
+// tableElem.appendChild(row1);
+// let th1Elem = document.createElement('th');
+// row1.appendChild(th1Elem);
+
+// th1Elem.textContent = `${hours}`;
 
 
+let tbodyElem = document.createElement('tbody');
+sectionElem.appendChild(tbodyElem);
 
-
+let row = document.createElement('th');
+sectionElem.appendChild(row);
+row.textContent = hours;
+// Render each store at a time
 Store.prototype.rendering = function () {
-  let tableElem = document.createElement('table');
-  sectionElem6.appendChild(tableElem);
 
-  // first row
-  // going to need a row for every store
-  let row1 = document.createElement('tr');
-  tableElem.appendChild(row1);
-  let th1Elem = document.createElement('th');
-  row1.appendChild(th1Elem);
-  th1Elem.textContent = `${hours} Daily Location Total`;
-  // let th2Elem = document.createElement('th');
-  // row1.appendChild(th2Elem);
-  // th2Elem.textContent = "Daily total";
-  // let th3Elem = document.createElement('th');
-  // row1.appendChild(th3Elem);
-  // th3Elem.textContent = this.sum;
-
-  // second row
-  let row2 = document.createElement('tr');
-  tableElem.appendChild(row2);
-  let td1Elem = document.createElement('td');
-  row2.appendChild(td1Elem);
-  td1Elem.textContent = `       ${this.name}  ${this.hrSales}    ${this.sum}`;
-
-  // let row3 = document.createElement('tr');
-  // tableElem.appendChild(row3);
-  // let td1Elem = document.createElement('td');
-  // row3.appendChild(td1Elem);
-  // td1Elem.textContent = this.sum;
-  
-  // let td2Elem = document.createElement('td');
-  // row2.appendChild(td2Elem);
-  // td2Elem.textContent = this.hrSales;
-  // let td3Elem = document.createElement('td');
-  // row2.appendChild(td3Elem);
-  // td3Elem.textContent = this.hrSales;
+  let tbodyElem2 = document.createElement('tbody');
+  sectionElem.appendChild(tbodyElem2);
+  tbodyElem2.textContent = this.hrSales;
+  // row for each store
 
 }
+//   for (let i = 0; i < this.hrSales.length; i --); {
+//     let tdSalesElem = document.createElement('td');
+//     td1Elem.appendChild(tdSalesElem);
+//     tdSalesElem.textContent = this.hrSales[i];
+//   }
+
+//   let lastTotal = document.createElement('td');
+//   tbodyElem.appendChild(lastTotal);
+//   lastTotal.textContent = `$Total is ${this.sum}`;
+
+// }
 
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
 let tokyoTown = new Store(3,25,1.2, 'Tokyo');
 let dubaiTown = new Store(11,38,3.7,'Dubai');
 let parisTown = new Store(20,38,2.3,'Paris');
 let limaTown = new Store(23,65,6.3,'Lima');
-
-console.log(homeTown.sum);
-console.log(tokyoTown.hrSales);
 
 homeTown.rendering();
 tokyoTown.rendering();
@@ -111,7 +105,3 @@ limaTown.rendering();
 
 
 
-
-// let tokyo = new Store(3,24,1.2, 'Tokyo',)
-// homeTown.
-// homeTown.rendering()
