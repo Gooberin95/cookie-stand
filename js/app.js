@@ -45,43 +45,54 @@ class Store {
 
 
 
-let row1 = document.createElement('th');
-sectionElem.appendChild(row1);
 
 
-row1.textContent = hours;
-
-// let tbodyElem = document.createElement('tbody');
-// sectionElem.appendChild(tbodyElem);
-
-// let row = document.createElement('th');
-// sectionElem.appendChild(row);
-// row.textContent = hours;
 
 Store.prototype.rendering = function () {
-  for (let i = 0; i < hours.length; i++);
-    
-    let rows = document.createElement('tr');
-    row1.appendChild(rows);
+  
+let row1 = document.createElement('tbody');
+sectionElem.appendChild(row1);
+  // for (let i = 0; i < this.hrSales.length; i++);
 
-    let th1Elem = document.createElement('td');
-    rows.appendChild(th1Elem);
-    th1Elem.textContent = `${this.name} ${this.hrSales}`;
-      
-    let lastTotal = document.createElement('td');
-    rows.appendChild(lastTotal);
-    lastTotal.textContent = `Daily Total: ${this.sum}`;
+let rows = document.createElement('tr');
+row1.appendChild(rows);
 
+let th1Elem = document.createElement('td');
+rows.appendChild(th1Elem);
+th1Elem.textContent = `${this.name}`;
 
+for (let i = 0; i < this.hrSales.length; i ++) {
+  let tdSalesElem = document.createElement('td')
+  rows.appendChild(tdSalesElem);
+  tdSalesElem.textContent = this.hrSales[i];
 }
 
 
+}
+function header() {
+  let headElem = document.createElement('thead');
+  sectionElem.appendChild(headElem);
+
+  let rowHeader = document.createElement('tr');
+  headElem.appendChild(rowHeader);
+
+  for(let i = 0; i < hours.length; i++) {
+    let lead = document.createElement('th');
+    rowHeader.appendChild(lead);
+    lead.textContent = hours[i];
+  }
+
+
+};
 
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
 let tokyoTown = new Store(23, 25, 3.2, 'Tokyo');
 let dubaiTown = new Store(11, 38, 3.7, 'Dubai');
 let parisTown = new Store(20, 38, 2.3, 'Paris');
 let limaTown = new Store(23, 65, 6.3, 'Lima');
+
+
+header();
 
 homeTown.rendering();
 tokyoTown.rendering();
