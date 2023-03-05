@@ -75,7 +75,9 @@ function header() {
 
   let rowHeader = document.createElement('tr');
   headElem.appendChild(rowHeader);
-
+  let space = document.createElement('th');
+  rowHeader.appendChild(space);
+  space.textContent = ('');
   for(let i = 0; i < hours.length; i++) {
     let lead = document.createElement('th');
     rowHeader.appendChild(lead);
