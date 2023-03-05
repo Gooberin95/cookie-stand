@@ -66,7 +66,7 @@ Store.prototype.rendering = function () {
 
     let th1Elem = document.createElement('td');
     rows.appendChild(th1Elem);
-    th1Elem.textContent = `${this.name}${this.hrSales}`;
+    th1Elem.textContent = `${this.name} ${this.hrSales}`;
       
     let lastTotal = document.createElement('td');
     rows.appendChild(lastTotal);
