@@ -25,7 +25,7 @@ class Store {
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.averageCookieSale = averageCookieSale;
-
+    
     for (let i = 0; i < hours.length; i++) {
       let tally = this.customersPerHour = randomAge(this.minCust, this.maxCust);
       this.hrSales.push(tally);
@@ -65,7 +65,12 @@ for (let i = 0; i < this.hrSales.length; i ++) {
   let tdSalesElem = document.createElement('td')
   rows.appendChild(tdSalesElem);
   tdSalesElem.textContent = this.hrSales[i];
+  trash + this.hrSales; 
 }
+this.hrSales.push(trash);
+let ender = document.createElement('td');
+rows.appendChild(ender);
+ender.textContent = this.sum;
 
 
 }
@@ -90,8 +95,22 @@ function header() {
 
 };
 
+
+function companyTotal() {
+  let headElem = document.createElement('thead');
+  sectionElem.appendChild(headElem);
+
+  let rowHeader = document.createElement('tr');
+  headElem.appendChild(rowHeader);
+  let space = document.createElement('th');
+  rowHeader.appendChild(space);
+  space.textContent = ('Total sales');
+}
+
+
+
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
-let tokyoTown = new Store(23, 25, 3.2, 'Tokyo');
+let tokyoTown = new Store(3, 24, 1.2, 'Tokyo');
 let dubaiTown = new Store(11, 38, 3.7, 'Dubai');
 let parisTown = new Store(20, 38, 2.3, 'Paris');
 let limaTown = new Store(23, 65, 6.3, 'Lima');
@@ -99,12 +118,15 @@ let limaTown = new Store(23, 65, 6.3, 'Lima');
 
 header();
 
+
+
 homeTown.rendering();
 tokyoTown.rendering();
 dubaiTown.rendering();
 parisTown.rendering();
 limaTown.rendering();
 
+companyTotal();
 
 
 
