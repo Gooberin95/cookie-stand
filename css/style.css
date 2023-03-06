@@ -1,7 +1,9 @@
-h1 {
+.container {
+  display: flex;
   font-size: 50px;
   text-align: center;
   margin: 20px;
+
 }
 
 nav {
@@ -15,6 +17,7 @@ section {
 }
 
 table {
+  
   border: 5px solid black;
   padding: 10px;
   background-color: lightblue;
@@ -25,14 +28,18 @@ th, td, tr {
   border: 2px solid black;
   padding: 10px;
   text-align: center;
+  background-color: salmon;
 }
 
-th, td {
-  background-color: aliceblue;
-}
+
 
 article {
   display: inline-block;
   margin: 10px;
 }
 
+#clicker {
+  display: flex;
+  
+  color: salmon;
+}
