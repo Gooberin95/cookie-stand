@@ -87,6 +87,12 @@ nav {
   height: 500px;
   background-color: salmon;
   border-radius: 15px;
+  
+  
+  
 }
 
 
+#hours {
+  text-align: center;
+}
