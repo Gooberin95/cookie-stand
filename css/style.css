@@ -7,7 +7,7 @@
   justify-content: right;
 }
 .container {
-  background-color:red ;
+  background-color: burlywood ;
   height: 75px;
   width: 100%;
   padding-top: 35px;
@@ -26,16 +26,19 @@ div {
   height: 40px;
   border-radius: 15px;
   text-align: center;
+  padding-top: 35px;
+  padding-bottom: 35px;
   
 }
 
 #hero {
 padding-top: 25px;
-width: 100%;
+width: 25%;
 
 }
 
-button {
-  color: brown;
-  border-radius: 10px;
+
+body {
+  background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/salmon.png");
+  background-repeat: repeat-x;
 }
