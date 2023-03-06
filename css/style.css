@@ -7,16 +7,16 @@
   justify-content: right;
 }
 .container {
-  background-color: brown;
+  background-color:red ;
   height: 75px;
   width: 100%;
   padding-top: 35px;
   padding-bottom: 35px;
   display: flex;
-  flex-direction: row;
+  flex-direction: row-reverse;
   
   
-  justify-content:center;
+  justify-content: space-around;
   
   
 }
@@ -27,4 +27,15 @@ div {
   border-radius: 15px;
   text-align: center;
   
+}
+
+#hero {
+padding-top: 25px;
+width: 100%;
+
+}
+
+button {
+  color: brown;
+  border-radius: 10px;
 }
