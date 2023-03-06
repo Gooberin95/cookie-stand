@@ -83,7 +83,10 @@ nav {
 
 
 #list {
-  height: 50%;
+  width: 20%;
+  height: 500px;
   background-color: salmon;
   border-radius: 15px;
 }
+
+
