@@ -19,7 +19,7 @@
  
   
   justify-content: space-evenly;
-  
+  background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/family.jpg");
   
 }
 
@@ -37,6 +37,8 @@ div {
   border: solid;
   font-weight: inherit;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
+  
 }
 
 
@@ -88,6 +90,7 @@ nav {
   background-color: salmon;
   border-radius: 10px;
   float:right;
+  background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/frosted-cookie.jpg");
   
   
   
@@ -97,7 +100,7 @@ nav {
 #list2 {
   width: 20%;
   height: 250px;
-  background-color: salmon;
+  background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/shirt.jpg");
   border-radius: 15px;
   float:left;
   
