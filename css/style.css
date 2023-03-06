@@ -37,8 +37,13 @@ width: 25%;
 
 }
 
+button {
+  background:salmon;
+  border-radius: 15px;
+  border: solid;
+}
 
 body {
   background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/salmon.png");
-  background-repeat: repeat-x;
+  background-position: center;
 }
