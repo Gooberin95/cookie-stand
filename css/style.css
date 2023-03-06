@@ -47,3 +47,7 @@ body {
   background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/salmon.png");
   background-position: center;
 }
+
+#salesTable {
+  justify-content: center;
+}
