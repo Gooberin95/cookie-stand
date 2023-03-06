@@ -32,11 +32,7 @@ div {
   
 }
 
-#hero {
-padding-top: 25px;
-width: 25%;
 
-}
 
 button {
   background:salmon;
@@ -47,13 +43,14 @@ button {
 body {
   background-image: url("https://raw.githubusercontent.com/codefellows/seattle-code-201n30/main/class-08/lab-b/assets/salmon.png");
   background-position: center;
+  
 }
 /* copied from codefellows class github then edited it to my personal styling */
 th, td, tr {
   margin-top: 5px;
   border: 12px solid burlywood;
   padding: 10px;
-  text-align: center;
+  text-align: right;
   border-radius: 5px;
 }
 
@@ -61,3 +58,4 @@ th, td {
   background-color: green;
   border-radius: 5px;
 }
+
