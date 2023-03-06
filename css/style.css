@@ -80,3 +80,10 @@ nav {
   border-color: brown;
   border: solid;
 }
+
+
+#list {
+  height: 50%;
+  background-color: salmon;
+  border-radius: 15px;
+}
