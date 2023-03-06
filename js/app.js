@@ -25,7 +25,7 @@ class Store {
     this.minCust = minCust;
     this.maxCust = maxCust;
     this.averageCookieSale = averageCookieSale;
-    
+    trash.push(this);
     for (let i = 0; i < hours.length; i++) {
       let tally = this.customersPerHour = randomAge(this.minCust, this.maxCust);
       this.hrSales.push(tally);
@@ -105,7 +105,32 @@ function companyTotal() {
   let space = document.createElement('th');
   rowHeader.appendChild(space);
   space.textContent = ('Total sales');
+
+  let totalRowArray = [];
+  for(let i = 0; i < hours.length; i ++) {
+    let currentTotal = 0;
+    for(let j = 0; j < trash.length; j ++) {
+      currentTotal += trash[j].hrSales[i];
+
+    }
+    totalRowArray.push(currentTotal);
+    console.log(totalRowArray);
+  }
+  let grandTotal = 0;
+  for(let i = 0; i < totalRowArray.length; i ++) {
+    grandTotal += totalRowArray[i];
+    let next = document.createElement('td');
+    rowHeader.appendChild(next);
+    next.textContent = totalRowArray[i];
+  }
+
+  let lastCell = document.createElement('th');
+  space.appendChild(lastCell);
+  lastCell.textContent = grandTotal;
+
 }
+
+
 
 
 
