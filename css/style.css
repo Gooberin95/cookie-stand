@@ -4,6 +4,7 @@
   background-color: none;
   width: 100%;
   height: 100%;
+  font-family: 'Source Code Pro', monospace;
   
   
 }
@@ -121,10 +122,12 @@ nav {
 
 #hours {
   justify-content: center;
+  
 }
 
 h1 {
   text-align: center;
+  font-family: 'Source Code Pro', monospace;
 }
 
 
@@ -163,3 +166,4 @@ ul,li {
   background-color: green;
   text-align: center;
 }
+
