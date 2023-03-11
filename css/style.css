@@ -5,6 +5,7 @@
   width: 100%;
   height: 100%;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  color:navy;
   
   
   
@@ -40,6 +41,7 @@ div {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   
   
+  
 }
 
 button {
@@ -48,6 +50,7 @@ button {
   border: solid;
   font-weight: bolder;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  
 }
 
 button2 {
@@ -130,6 +133,7 @@ nav {
 h1 {
   text-align: center;
   font-family: 'Source Code Pro', monospace;
+  color:blue;
 }
 
 
@@ -157,6 +161,7 @@ ul,li {
   background-color: aliceblue;
   border-radius: 10px;
   font-family: 'Source Code Pro', monospace;
+  color:yellowgreen;
 }
 
 
