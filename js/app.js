@@ -131,7 +131,10 @@ function companyTotal() {
 }
 
 
-
+function formsub() {
+  let forms = document.createElement('input');
+  sectionElem.appendChild(forms);
+}
 
 
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
