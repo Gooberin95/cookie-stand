@@ -131,12 +131,30 @@ function companyTotal() {
 }
 
 
-function formsub() {
-  let forms = document.createElement('input');
-  sectionElem.appendChild(forms);
+let subs = [];
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+
+  let userInput1 = +event.target.avg.value;
+  let userInput2 = +event.target.min.value;
+  let userInput3 = +event.target.max.value;
+  let userInput4 = event.target.cityName.value;
+  subs.push(userInput1);
+  subs.push(userInput2);
+  subs.push(userInput3);
+  subs.push(userInput4);
+  console.log(subs);
 }
 
+form.addEventListener('submit', handleSubmit);
 
+console.log(subs);
+
+
+
+// let formSub = new Store(subs[], userInput3, userInput1, userInput4);
 let homeTown = new Store(23, 65, 6.3, 'Seattle');
 let tokyoTown = new Store(3, 24, 1.2, 'Tokyo');
 let dubaiTown = new Store(11, 38, 3.7, 'Dubai');
@@ -153,25 +171,10 @@ tokyoTown.rendering();
 dubaiTown.rendering();
 parisTown.rendering();
 limaTown.rendering();
+// formSub.rendering();
 
 companyTotal();
 
-
-function handleSubmit(event) {
-  event.preventDefault();
-
-  let userInput1 = +event.target.avg.value;
-  let userInput2 = +event.target.min.value;
-  let userInput3 = +event.target.max.value;
-  let userInput4 = event.target.cityName.value;
-
-  console.log(userInput1);
-  console.log(userInput2);
-  console.log(userInput3);
-  console.log(userInput4);
-}
-
-form.addEventListener('submit', handleSubmit);
 
 
 
