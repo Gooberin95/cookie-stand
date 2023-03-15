@@ -157,8 +157,21 @@ limaTown.rendering();
 companyTotal();
 
 
+function handleSubmit(event) {
+  event.preventDefault();
 
+  let userInput1 = +event.target.avg.value;
+  let userInput2 = +event.target.min.value;
+  let userInput3 = +event.target.max.value;
+  let userInput4 = event.target.cityName.value;
 
+  console.log(userInput1);
+  console.log(userInput2);
+  console.log(userInput3);
+  console.log(userInput4);
+}
+
+form.addEventListener('submit', handleSubmit);
 
 
 
