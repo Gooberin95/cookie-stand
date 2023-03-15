@@ -141,18 +141,17 @@ function handleSubmit(event) {
   let userInput2 = +event.target.min.value;
   let userInput3 = +event.target.max.value;
   let userInput4 = event.target.cityName.value;
-  subs.push(userInput1);
-  subs.push(userInput2);
-  subs.push(userInput3);
-  subs.push(userInput4);
-  let formSub = new Store(subs[1],subs[2],subs[0],subs[3]);
+
+  let formSub = new Store(userInput2, userInput3, userInput1, userInput4);
+  formSub.rendering();
+
   form.reset();
 }
 
 
 
 console.log(subs);
-let formSub = new Store(subs[1],subs[2],subs[0],subs[3]);
+
 
 
 
@@ -172,7 +171,7 @@ tokyoTown.rendering();
 dubaiTown.rendering();
 parisTown.rendering();
 limaTown.rendering();
-formSub.rendering();
+
 
 companyTotal();
 
