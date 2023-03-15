@@ -144,6 +144,7 @@ function handleSubmit(event) {
 
   let formSub = new Store(userInput2, userInput3, userInput1, userInput4);
   formSub.rendering();
+  companyTotal();
 
   form.reset();
 }
